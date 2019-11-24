@@ -3,8 +3,8 @@
 ## Development - Getting Started
 
 ```
-yarn install
+npm install
 
-yarn run dev
+npm run dev
 
 ```
