@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "format": "prettier --write \"components/**/*.{js,jsx,css,json}\"",
     "lint": "eslint --fix \"components/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
