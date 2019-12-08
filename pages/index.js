@@ -4,6 +4,9 @@ import withData from '../config';
 import TopicList from './TopicList';
 import GET_TOPICS from '../graphql/Topics';
 
+// Global Styles
+import GlobalStyles from '../styles/GlobalStyles';
+
 const Index = () => {
   return (
     <Query // <- Wrapping the main component with Query component from react-apollo
@@ -17,6 +20,7 @@ const Index = () => {
         if (data && data.topics && data.topics.length >= 1) {
           return (
             <div>
+              <GlobalStyles />
               <h1>Topics</h1>
               <TopicList topics={data.topics} />
             </div>
