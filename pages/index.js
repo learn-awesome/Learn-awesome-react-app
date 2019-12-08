@@ -3,6 +3,7 @@ import withData from '../config';
 
 import TopicList from './TopicList';
 import GET_TOPICS from '../graphql/Topics';
+import NetworkLoader from '../utils/NetworkLoader';
 
 // Global Styles
 import GlobalStyles from '../styles/GlobalStyles';
@@ -14,7 +15,7 @@ const Index = () => {
       fetchPolicy={'cache-and-network'}
     >
       {({ loading, data, error }) => {
-        if (loading) return <p>Loading...</p>;
+        if (loading) return <NetworkLoader />;
         if (error) return <p>Somethign went wrong.</p>;
 
         if (data && data.topics && data.topics.length >= 1) {
