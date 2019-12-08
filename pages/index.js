@@ -1,37 +1,30 @@
-import gql from 'graphql-tag'
-import { Query } from 'react-apollo'
+import { Query } from 'react-apollo';
 import withData from '../config';
 
 import TopicList from './TopicList';
+import GET_TOPICS from '../graphql/Topics';
 
-const query = gql`
-	query {
-    topics(limit: 5) {
-      id
-      name
-    }
-	}
-`
-
-const Index = ({ topics } ) => {
+const Index = () => {
   return (
-    <Query    // <- Wrapping the main component with Query component from react-apollo
-      query={ query }
-      fetchPolicy={ 'cache-and-network' }
+    <Query // <- Wrapping the main component with Query component from react-apollo
+      query={GET_TOPICS}
+      fetchPolicy={'cache-and-network'}
     >
       {({ loading, data, error }) => {
-        if(error) {
-          return (<div>Error..</div>);
+        if (loading) return <p>Loading...</p>;
+        if (error) return <p>Somethign went wrong.</p>;
+
+        if (data && data.topics && data.topics.length >= 1) {
+          return (
+            <div>
+              <h1>Topics</h1>
+              <TopicList topics={data.topics} />
+            </div>
+          );
         }
-        return (
-          <div>
-            <h1>Topics</h1>
-            <TopicList topics={data ? data.topics: []} />
-          </div>
-        );
       }}
     </Query>
   );
 };
 
-export default withData(Index)
+export default withData(Index);
