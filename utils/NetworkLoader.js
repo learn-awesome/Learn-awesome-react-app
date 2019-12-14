@@ -53,7 +53,8 @@ class NetworkLoader extends Component {
           css={override}
           sizeUnit="px"
           height={6}
-          color="#327ff6"
+          // color="#327ff6"
+          color="#000"
           loading={true}
           width={width ? width : 1920}
         />
