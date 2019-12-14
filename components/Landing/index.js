@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Landing = () => <p>Home</p>;
+import Header from './Header';
+
+const Landing = () => <Header />;
 
 export default Landing;
