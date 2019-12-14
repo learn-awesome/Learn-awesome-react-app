@@ -17,5 +17,6 @@ export const LoginSection = styled.div`
 
   p {
     margin-left: 2rem;
+    cursor: pointer;
   }
 `;

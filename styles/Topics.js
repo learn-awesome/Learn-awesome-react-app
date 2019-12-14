@@ -13,15 +13,16 @@ export const TopicsWrapper = styled.div`
     font-size: 72px;
     line-height: 87px;
     margin: 0;
+    letter-spacing: -0.35px;
   }
 `;
 
 export const SearchBoxWrapper = styled.div`
-  margin-top: 1.25rem;
-  width: 38%;
+  margin-top: 1.35rem;
+  width: 40%;
   min-height: 60px;
   max-height: 350px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   overflow: hidden;
   overflow-y: scroll;
