@@ -19,7 +19,26 @@ export const TopicsWrapper = styled.div`
 export const SearchBoxWrapper = styled.div`
   margin-top: 1.25rem;
   width: 38%;
-  height: 65px;
+  min-height: 60px;
+  max-height: 350px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   border-radius: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  ${'' /* Scrollbar ~ Customized for search results */} ::-webkit-scrollbar {
+    background: transparent;
+    border-radius: 30px;
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 80px;
+    height: 30px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
 `;
