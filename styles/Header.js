@@ -8,6 +8,7 @@ export const HeaderWrapper = styled.div`
 
   #logo {
     width: 2rem;
+    margin-left: 1rem;
   }
 `;
 

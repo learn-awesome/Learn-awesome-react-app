@@ -15,3 +15,11 @@ export const TopicsWrapper = styled.div`
     margin: 0;
   }
 `;
+
+export const SearchBoxWrapper = styled.div`
+  margin-top: 1.25rem;
+  width: 38%;
+  height: 65px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-radius: 10px;
+`;

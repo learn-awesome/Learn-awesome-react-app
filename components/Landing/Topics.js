@@ -5,7 +5,7 @@ import { Query } from 'react-apollo';
 import GET_TOPICS from '../../graphql/Topics';
 import NetworkLoader from '../../utils/NetworkLoader';
 
-import { TopicsWrapper } from '../../styles/Topics';
+import { TopicsWrapper, SearchBoxWrapper } from '../../styles/Topics';
 
 const Topics = () => (
   <TopicsWrapper>
@@ -34,14 +34,19 @@ const Topics = () => (
           // ************************************* //
 
           return (
-            <ReactSearchBox
-              placeholder={`Type Here...`}
-              data={searchBarData}
-              inputBoxBorderColor="black"
-              fuseConfigs={{
-                threshold: 0.1,
-              }}
-            />
+            <SearchBoxWrapper>
+              <ReactSearchBox
+                placeholder={`Type Here...`}
+                data={searchBarData}
+                autoFocus
+                inputBoxBorderColor="transparent"
+                inputBoxFontSize="20px"
+                inputBoxHeight="65px"
+                fuseConfigs={{
+                  threshold: 0.5,
+                }}
+              />
+            </SearchBoxWrapper>
           );
         }
         // In case of when no topic is available.
