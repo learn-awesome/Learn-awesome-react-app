@@ -1,16 +1,14 @@
 import Head from 'next/head';
 
 import withData from '../config';
-
-// Global Styles
-import GlobalStyles from '../styles/GlobalStyles';
+import App from '../components';
 
 const Index = () => (
   <div>
     <Head>
       <title>Learnawesome</title>
     </Head>
-    <GlobalStyles />
+    <App />
   </div>
 );
 
