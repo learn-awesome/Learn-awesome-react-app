@@ -1,20 +1,17 @@
 import React from 'react';
 
-import Landing from './Landing';
 // Context Store
 import { StoreProvider } from '../store';
 
-// Global Styles
-import GlobalStyles from '../styles/GlobalStyles';
-import { AppWrapper } from '../styles/App';
+// Main App Component
+import App from './App';
 
-const App = () => (
+// Top-level root component ************ //
+
+const LearnAnyting = () => (
   <StoreProvider>
-    <AppWrapper>
-      <GlobalStyles />
-      <Landing />
-    </AppWrapper>
+    <App />
   </StoreProvider>
 );
 
-export default App;
+export default LearnAnyting;

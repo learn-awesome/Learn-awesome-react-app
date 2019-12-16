@@ -6,13 +6,18 @@ import { HeaderWrapper, LoginSection, ThemeSwitch } from '../../styles/Header';
 
 const Header = () => (
   <StoreConsumer>
-    {({ isDarkThemeActive }) => (
+    {({ isDarkThemeActive, toggleActiveTheme }) => (
       <HeaderWrapper>
         <img src="/logo.svg" alt="Logo" id="logo" />
         <LoginSection>
           <ThemeSwitch>
             <label id="switch" className="switch">
-              <input type="checkbox" id="slider" checked={isDarkThemeActive ? false : true} />
+              <input
+                type="checkbox"
+                id="slider"
+                checked={isDarkThemeActive ? false : true}
+                onChange={toggleActiveTheme}
+              />
               <span className="slider round"></span>
             </label>
           </ThemeSwitch>
