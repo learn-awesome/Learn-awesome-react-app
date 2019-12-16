@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Context Store
-import { StoreProvider } from '../store';
+import { StoreProvider, StoreConsumer } from '../store';
 
 // Main App Component
 import App from './App';
@@ -10,7 +10,11 @@ import App from './App';
 
 const LearnAnyting = () => (
   <StoreProvider>
-    <App />
+    <StoreConsumer>
+      {({ retrieveFromLocalStorage }) => (
+        <App retrieveFromLocalStorage={retrieveFromLocalStorage} />
+      )}
+    </StoreConsumer>
   </StoreProvider>
 );
 
