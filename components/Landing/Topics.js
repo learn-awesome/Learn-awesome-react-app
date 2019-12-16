@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus */
 import React from 'react';
 import ReactSearchBox from 'react-search-box';
 import { Query } from 'react-apollo';
@@ -35,17 +36,19 @@ const Topics = () => (
 
           return (
             <SearchBoxWrapper>
-              <ReactSearchBox
-                placeholder={`Type Here...`}
-                data={searchBarData}
-                autoFocus
-                inputBoxBorderColor="transparent"
-                inputBoxFontSize="20px"
-                inputBoxHeight="65px"
-                fuseConfigs={{
-                  threshold: 0.5,
-                }}
-              />
+              {typeof window !== 'undefined' && ( // <-- Here I'm rendering my Search Bar only on the client side by checking for window.
+                <ReactSearchBox
+                  placeholder={`Type Here...`}
+                  data={searchBarData}
+                  autoFocus
+                  inputBoxBorderColor="transparent"
+                  inputBoxFontSize="20px"
+                  inputBoxHeight="65px"
+                  fuseConfigs={{
+                    threshold: 0.5,
+                  }}
+                />
+              )}
             </SearchBoxWrapper>
           );
         }
