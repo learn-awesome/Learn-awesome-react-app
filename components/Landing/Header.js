@@ -8,7 +8,12 @@ const Header = () => (
   <StoreConsumer>
     {({ isDarkThemeActive, toggleActiveTheme }) => (
       <HeaderWrapper>
-        <img src="/logo.svg" alt="Logo" id="logo" />
+        {/* White Logo on Dark Theme / Dark Logo on Light Theme */}
+        {isDarkThemeActive ? (
+          <img src="/white-logo.png" alt="Learnawesome" id="logo" />
+        ) : (
+          <img src="/logo.svg" alt="Learnawesome" id="logo" />
+        )}
         <LoginSection>
           <ThemeSwitch>
             <label id="switch" className="switch">

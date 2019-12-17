@@ -22,13 +22,18 @@ const GlobalStyles = createGlobalStyle`
 
     ${'' /* Theme Background */}
     ${({ theme }) => {
-      console.log(theme);
-
       return css`
-        background: theme.colors.background;
+        background: ${theme.colors.background};
       `;
     }}
   }
+
+  ${'' /* Theme ~ Styling */}
+
+  h1, p, svg {
+    color: ${({ theme }) => theme.colors.text};
+  }
+
   `;
 
 export default GlobalStyles;
