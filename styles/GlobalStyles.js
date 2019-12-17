@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 // CSS Normalize ~ polished (Styled-Components)
 import { normalize } from 'polished';
@@ -18,7 +18,16 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-     font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
+
+    ${'' /* Theme Background */}
+    ${({ theme }) => {
+      console.log(theme);
+
+      return css`
+        background: theme.colors.background;
+      `;
+    }}
   }
   `;
 

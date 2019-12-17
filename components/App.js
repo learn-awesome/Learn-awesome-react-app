@@ -38,8 +38,8 @@ class App extends React.Component {
 
     return (
       <ThemeProvider theme={isDarkThemeActive ? darkThemeObject : lightThemeObject}>
+        <GlobalStyles />
         <AppWrapper>
-          <GlobalStyles />
           <Landing />
         </AppWrapper>
       </ThemeProvider>

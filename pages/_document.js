@@ -1,29 +1,31 @@
-import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-export default class MyCustomDocument extends Document {
-  static getInitialProps({ renderPage }) {
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
 
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const originalRenderPage = ctx.renderPage;
 
-    const styleTags = sheet.getStyleElement();
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+        });
 
-    return { ...page, styleTags }; // return styles collected
-  }
+      const initialProps = await Document.getInitialProps(ctx);
 
-  // *************************** //
-
-  render() {
-    return (
-      <html lang="en-us">
-        <Head>{this.props.styleTags}</Head>
-        <body style={{ margin: '0px' }}>
-          <Main />
-          <NextScript />
-        </body>
-      </html>
-    );
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 }
