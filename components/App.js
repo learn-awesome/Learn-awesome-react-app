@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ThemeProvider } from 'styled-components';
 
 import Landing from './Landing';
+
+// Theme Object ***************** //
+import { darkThemeObject, lightThemeObject } from '../theme';
 
 // Global Styles
 import GlobalStyles from '../styles/GlobalStyles';
@@ -30,11 +34,15 @@ class App extends React.Component {
 
   // ************************ //
   render() {
+    const { isDarkThemeActive } = this.props;
+
     return (
-      <AppWrapper>
-        <GlobalStyles />
-        <Landing />
-      </AppWrapper>
+      <ThemeProvider theme={isDarkThemeActive ? darkThemeObject : lightThemeObject}>
+        <AppWrapper>
+          <GlobalStyles />
+          <Landing />
+        </AppWrapper>
+      </ThemeProvider>
     );
   }
 }
@@ -43,6 +51,7 @@ class App extends React.Component {
 
 App.propTypes = {
   retrieveFromLocalStorage: PropTypes.func.isRequired,
+  isDarkThemeActive: PropTypes.bool,
 };
 
 // ********************************************** //

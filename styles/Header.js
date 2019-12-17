@@ -53,8 +53,8 @@ export const ThemeSwitch = styled.div`
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
 
   .slider:before {
@@ -67,8 +67,8 @@ export const ThemeSwitch = styled.div`
     top: 0;
     bottom: 0;
     margin: auto 0;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
     box-shadow: 0 0px 15px #2020203d;
     background: white url('https://i.ibb.co/FxzBYR9/night.png');
     background-repeat: no-repeat;

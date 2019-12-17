@@ -11,8 +11,11 @@ import App from './App';
 const LearnAnyting = () => (
   <StoreProvider>
     <StoreConsumer>
-      {({ retrieveFromLocalStorage }) => (
-        <App retrieveFromLocalStorage={retrieveFromLocalStorage} />
+      {({ retrieveFromLocalStorage, isDarkThemeActive }) => (
+        <App
+          retrieveFromLocalStorage={retrieveFromLocalStorage}
+          isDarkThemeActive={isDarkThemeActive}
+        />
       )}
     </StoreConsumer>
   </StoreProvider>

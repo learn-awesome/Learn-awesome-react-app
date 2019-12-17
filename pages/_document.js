@@ -13,6 +13,8 @@ export default class MyCustomDocument extends Document {
     return { ...page, styleTags }; // return styles collected
   }
 
+  // *************************** //
+
   render() {
     return (
       <html lang="en-us">
