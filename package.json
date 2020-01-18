@@ -27,7 +27,7 @@
     "apollo-boost": "^0.4.4",
     "graphql": "^14.5.6",
     "graphql-tag": "^2.10.1",
-    "next": "^9.1.6",
+    "next": "^9.2.0",
     "next-apollo": "^3.1.10",
     "next-server": "^9.0.5",
     "polished": "^3.4.2",
@@ -38,7 +38,7 @@
     "react-icons": "^3.8.0",
     "react-search-box": "^2.0.2",
     "react-spinners": "^0.6.1",
-    "styled-components": "^5.0.0-rc.2"
+    "styled-components": "^5.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
