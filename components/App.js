@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import Landing from './Landing';
-import NetworkLoader from '../utils/NetworkLoader';
+// import NetworkLoader from '../utils/NetworkLoader';
 
 // Theme Object ***************** //
 import { darkThemeObject, lightThemeObject } from '../theme';
@@ -44,20 +44,18 @@ class App extends React.Component {
   render() {
     const { isDarkThemeActive } = this.props;
 
-    const { isMounted } = this.state;
+    // const { isMounted } = this.state;
 
-    if (isMounted) {
-      return (
-        <ThemeProvider theme={isDarkThemeActive ? darkThemeObject : lightThemeObject}>
-          <GlobalStyles />
-          <AppWrapper>
-            <Landing />
-          </AppWrapper>
-        </ThemeProvider>
-      );
-    } else {
-      return <NetworkLoader />;
-    }
+    // ^^ Temp ~ Theme check delayed ^^ //
+
+    return (
+      <ThemeProvider theme={isDarkThemeActive ? darkThemeObject : lightThemeObject}>
+        <GlobalStyles />
+        <AppWrapper>
+          <Landing />
+        </AppWrapper>
+      </ThemeProvider>
+    );
   }
 }
 
