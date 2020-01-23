@@ -25,7 +25,7 @@ export const SearchBoxWrapper = styled.div`
   box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   ${'' /* Scrollbar ~ Customized for search results */} ::-webkit-scrollbar {
     background: transparent;
