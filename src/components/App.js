@@ -4,8 +4,6 @@ import { ThemeProvider } from 'styled-components';
 
 import Landing from './Landing';
 // import NetworkLoader from '../utils/NetworkLoader';
-
-// Theme Object ***************** //
 import { darkThemeObject, lightThemeObject } from '../theme';
 
 // Global Styles
@@ -16,8 +14,8 @@ class App extends React.Component {
   state = {
     isMounted: false,
   };
-  // Setting Intitial Store for Local / Session Storage Values
 
+  // Setting Intitial Store for Local / Session Storage Values
   componentDidMount() {
     this.setInitialStore();
   }
@@ -59,13 +57,9 @@ class App extends React.Component {
   }
 }
 
-// App ~ PropTypes ***************************** //
-
 App.propTypes = {
   retrieveFromLocalStorage: PropTypes.func.isRequired,
   isDarkThemeActive: PropTypes.bool,
 };
-
-// ********************************************** //
 
 export default App;

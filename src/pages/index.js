@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import withData from '../config';
+import withData from '../../config';
 import App from '../components';
 
 const Index = () => (
