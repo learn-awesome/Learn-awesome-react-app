@@ -19,8 +19,8 @@ For more information see [getting started in the docs](https://docs.learnawesome
 
 | Project | Status | Description |
 |---------|--------|-------------|
-| [learn-awesome-backend]          | [![vue-router-status]][vue-router-package] | Frontend of web app in React |
-| [learn-awesome-frontend]         | [![vuex-status]][vuex-package] | Backend in RoR with GraphQL |
+| [learn-awesome-backend]          | [![vue-router-status]][vue-router-package] | Backend in RoR with GraphQL |
+| [learn-awesome-frontend]         | [![vuex-status]][vuex-package] | Frontend of web app in React |
 | [learn-awesome-webextension]     | [![vue-devtools-status]][vue-devtools-package] | Browser add-on for learnawesome |
 
 [learn-awesome-backend]: https://github.com/learn-awesome/learn
