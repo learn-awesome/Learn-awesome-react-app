@@ -27,7 +27,7 @@
     "apollo-boost": "^0.4.4",
     "graphql": "^14.5.6",
     "graphql-tag": "^2.10.1",
-    "next": "^9.3.4",
+    "next": "^11.1.0",
     "next-apollo": "^3.1.10",
     "next-server": "^9.0.5",
     "polished": "^3.4.2",
